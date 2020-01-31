@@ -1,8 +1,8 @@
 ﻿namespace BlankApp2.Views
 {
-    public partial class MainPage
+    public partial class SinglePage
     {
-        public MainPage()
+        public SinglePage()
         {
             InitializeComponent();
         }

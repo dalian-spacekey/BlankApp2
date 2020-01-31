@@ -1,4 +1,5 @@
-﻿using Prism;
+﻿using BlankApp2.Models;
+using Prism;
 using Prism.Ioc;
 using BlankApp2.ViewModels;
 using BlankApp2.Views;
@@ -23,8 +24,13 @@ namespace BlankApp2
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // 「なんか全体的なデータを保持したりするモデル」はシングルトンで裏に居座ってもらう
+            containerRegistry.RegisterSingleton<CoreModel>();
+
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SinglePage, SinglePageViewModel>();
+            containerRegistry.RegisterForNavigation<ListPage, ListPageViewModel>();
         }
     }
 }

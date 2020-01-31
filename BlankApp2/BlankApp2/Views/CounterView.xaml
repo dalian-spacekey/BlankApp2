@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BlankApp2.Views.CounterView">
+  <!-- カウンター用のビュー。ViewModelはBindingContextに自分で入れる -->
+  <Grid>
+    <Frame CornerRadius="5"
+           BorderColor="Gray"
+           VerticalOptions="Center"
+           Margin="10"
+           BackgroundColor="GhostWhite"
+           HasShadow="False">
+      <StackLayout 
+        HorizontalOptions="CenterAndExpand" 
+        VerticalOptions="CenterAndExpand">
+        <Label 
+          Text="{Binding CounterName.Value}" 
+          HorizontalOptions="Center"/>
+        <Label 
+          Text="{Binding Count.Value}" 
+          HorizontalOptions="Center"/>
+        <Button 
+          Text="Up" 
+          Command="{Binding UpCommand}"/>
+        <Button 
+          Text="Down" 
+          Command="{Binding DownCommand}"/>
+      </StackLayout>
+    </Frame>
+  </Grid>
+
+</ContentView>

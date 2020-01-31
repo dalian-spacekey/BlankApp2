@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:views="clr-namespace:BlankApp2.Views;assembly=BlankApp2"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BlankApp2.Views.SinglePage"
+             Title="Single Page">
+
+  <!-- カウンター用のViewを配置してBindingContextは、SinglePageViewModelで用意したCounterViewModelを入れる -->
+  <views:CounterView BindingContext="{Binding CounterViewModel.Value}"/>
+
+</ContentPage>

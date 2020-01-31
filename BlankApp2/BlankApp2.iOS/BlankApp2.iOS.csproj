@@ -172,11 +172,6 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h@2x.png" />
-    <BundleResource Include="Resources\Default-Portrait.png" />
-    <BundleResource Include="Resources\Default-Portrait@2x.png" />
-    <BundleResource Include="Resources\Default.png" />
-    <BundleResource Include="Resources\Default@2x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +181,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LiveXAML">
+      <Version>2.1.73</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
   </ItemGroup>
