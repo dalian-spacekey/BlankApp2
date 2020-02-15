@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="Base"
+             x:Class="BlankApp2.Views.SelectionPage">
+
+  <CollectionView ItemsSource="{Binding Counters}">
+    <CollectionView.ItemTemplate>
+      <DataTemplate>
+        <Grid Padding="10">
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding BindingContext.SelectCommand, Source={x:Reference Base}}" 
+                                  CommandParameter="{Binding}"/>
+          </Grid.GestureRecognizers>
+          <StackLayout Orientation="Horizontal">
+            <BoxView HeightRequest="48" 
+                     WidthRequest="48"
+                     CornerRadius="3"
+                     Color="Gray"/>
+            <Label Text="{Binding Name}"
+                   VerticalOptions="Center"/>
+          </StackLayout>
+        </Grid>
+      </DataTemplate>
+    </CollectionView.ItemTemplate>
+  </CollectionView>
+
+</ContentPage>

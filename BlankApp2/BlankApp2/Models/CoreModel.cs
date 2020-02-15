@@ -21,5 +21,15 @@ namespace BlankApp2.Models
         }
 
         public ObservableCollection<CounterModel> Counters { get; }
+
+        /// <summary>
+        /// 現在の対象カウンター
+        /// </summary>
+        public CounterModel CurrentCounter
+        {
+            get => currentCounter;
+            set => SetProperty(ref currentCounter, value);
+        }
+        private CounterModel currentCounter;
     }
 }

@@ -12,10 +12,15 @@ namespace BlankApp2.ViewModels
 
             MoveListPageCommand = new ReactiveCommand();
             MoveListPageCommand.Subscribe(async () => await navigationService.NavigateAsync("ListPage"));
+
+            SelectionPageCommand = new ReactiveCommand();
+            SelectionPageCommand.Subscribe(async () => await navigationService.NavigateAsync("SelectionPage"));
+
         }
 
         public ReactiveCommand MoveSinglePageCommand { get; }
         public ReactiveCommand MoveListPageCommand { get; }
+        public ReactiveCommand SelectionPageCommand { get; }
 
     }
 }

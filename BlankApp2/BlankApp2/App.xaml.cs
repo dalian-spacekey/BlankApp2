@@ -31,6 +31,9 @@ namespace BlankApp2
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<SinglePage, SinglePageViewModel>();
             containerRegistry.RegisterForNavigation<ListPage, ListPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<SelectionPage, SelectionPageViewModel>();
+            containerRegistry.RegisterForNavigation<DetailPage, DetailPageViewModel>();
         }
     }
 }
